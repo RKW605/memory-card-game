@@ -1,0 +1,119 @@
+body {
+    background-color: grey; /* Light mode body background */
+    color: black; /* Light mode text color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Positioning for absolute elements */
+}
+
+.container {
+    text-align: center;
+}
+
+#homeButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: yellow; /* Light mode button color */
+    color: darkviolet; /* Light mode button text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 24px; /* Increase button size for visibility */
+}
+
+#homeButton:hover {
+    background-color: darkviolet;
+    color: yellow;
+    transform: scale(1.1);
+}
+
+.themeSwitcher {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#themeButton {
+    background-color: black; /* Background for theme button */
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    color: white; /* Icon color */
+    font-size: 24px; /* Increase button size for visibility */
+}
+
+#themeButton:hover {
+    background-color: grey; /* Change on hover */
+}
+
+#welcomeMessage {
+    margin-top: 50px; /* Space above welcome message */
+    font-size: 28px; /* Increased size for better visibility */
+    font-weight: bold; /* Make the text bold */
+}
+
+#difficulty-buttons {
+    margin-top: 20px; /* Space between welcome message and difficulty selection */
+}
+
+.difficulty-button {
+    display: block; /* Makes buttons stack vertically */
+    background-color: yellow; /* Light mode button color */
+    color: darkviolet; /* Light mode button text color */
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px auto; /* Center buttons and space between */
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 200px; /* Set a width to maintain alignment */
+}
+
+.difficulty-button:hover {
+    background-color: darkviolet;
+    color: yellow;
+    transform: scale(1.1);
+}
+
+#description {
+    margin-top: 20px;
+    color: lightgrey; /* Description color for light mode */
+    font-size: 16px; /* Increased font size */
+}
+
+/* Dark mode styles */
+body.dark {
+    background-color: #222; /* Darker background */
+    color: white; /* Text color */
+}
+
+body.dark #homeButton,
+body.dark .difficulty-button {
+    background-color: navy; /* Dark mode button color */
+    color: lime; /* Dark mode button text color */
+}
+
+body.dark #homeButton:hover,
+body.dark .difficulty-button:hover {
+    background-color: lime; /* Change to lime on hover */
+    color: navy; /* Change text to navy on hover */
+}
+
+body.dark #description {
+    color: #ccc; /* Description color for dark mode */
+}
+
+body.dark #themeButton {
+    background-color: black; /* Dark mode background for theme button */
+    color: white; /* Dark mode icon color */
+}
+

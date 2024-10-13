@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #0077b6;
+    color: white;
+}
+
+#homeButton {
+    background-color: #f94144;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+#homeButton:hover {
+    background-color: #d62828;
+}
+
+#welcomeMessage {
+    font-size: 1.5rem;
+}
+
+#modeToggle {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.timer-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#timer {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000080; /* Navy Blue in Light Mode */
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 8 columns */
+    grid-gap: 5px; /* Reduced gap between all cards */
+    justify-content: center;
+    padding: 10px; /* Padding around the board */
+    max-width: 95vw; /* Limit to 95% of viewport width */
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #ffcc99; /* Light mode card color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem; /* Increased font size for visibility on desktop */
+    width: 80px; /* Adjusted width for larger cards */
+    height: 80px; /* Adjusted height for larger cards */
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.card.flipped {
+    background-color: #ffe066; /* Light mode flipped card color */
+    transform: rotateY(180deg);
+}
+
+.card.matched {
+    background-color: lightgreen; 
+    color: white;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode .card {
+    background-color: #4a4e69; /* Dark mode unflipped card color */
+}
+
+.dark-mode .card.flipped {
+    background-color: darkgoldenrod; /* Dark mode flipped card color */
+}
+
+.dark-mode .card.matched {
+    background-color: darkgreen; 
+    color: #f2e9e4; 
+}
+
+.dark-mode #timer {
+    color: #ffd700; 
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 40px; /* Smaller width for mobile */
+        height: 40px; /* Smaller height for mobile */
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+
+    .board {
+        max-width: 100vw; /* Limit to full viewport width */
+    }
+
+    #welcomeMessage {
+        font-size: 1.2rem; /* Adjusted welcome message size */
+    }
+
+    #timer {
+        font-size: 1.5rem; /* Adjusted timer size */
+    }
+}

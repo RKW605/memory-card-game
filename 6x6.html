@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6x6 Memory Game</title>
+    <link rel="stylesheet" href="6x6.css">
+</head>
+<body>
+    <header>
+        <button id="homeButton">🏠</button>
+        <h1 id="welcomeMessage">Welcome to the 6x6 Memory Game</h1>
+        <select id="modeToggle">
+            <option value="light">🌞</option>
+            <option value="dark">🌙</option>
+        </select>
+    </header>
+
+    <div class="timer-container">
+        <div id="timer">00:00</div>
+    </div>
+
+    <div class="board" id="board">
+        <!-- Cards will be dynamically generated here -->
+    </div>
+
+    <script src="6x6.js"></script>
+</body>
+</html>

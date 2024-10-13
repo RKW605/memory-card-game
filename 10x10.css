@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #0077b6;
+    color: white;
+}
+
+#homeButton {
+    background-color: #f94144;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+#homeButton:hover {
+    background-color: #d62828;
+}
+
+#welcomeMessage {
+    font-size: 1.5rem;
+}
+
+#modeToggle {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.timer-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#timer {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000080; /* Navy Blue in Light Mode */
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 5px; /* Adjust as needed */
+    justify-content: center;
+    padding: 2px;
+    max-width: 800px; /* Max width for larger screens */
+    margin: 0 auto;
+    overflow: hidden; /* Prevent vertical overflow */
+}
+
+.card {
+    background-color: #ffcc99; /* Light mode card color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width: 70px; /* Increased size */
+    height: 70px; /* Increased size */
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.card.flipped {
+    background-color: #ffe066; /* Light mode flipped card color */
+    transform: rotateY(180deg);
+}
+
+.card.matched {
+    background-color: lightgreen; 
+    color: white;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode .card {
+    background-color: #4a4e69; /* Dark mode unflipped card color */
+}
+
+.dark-mode .card.flipped {
+    background-color: darkgoldenrod; /* Dark mode flipped card color */
+}
+
+.dark-mode .card.matched {
+    background-color: darkgreen; 
+    color: #f2e9e4; 
+}
+
+.dark-mode #timer {
+    color: #ffd700; 
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
+    }
+
+    .card {
+        width: 50px; /* Decrease size for mobile */
+        height: 50px; /* Decrease size for mobile */
+        font-size: 1.5rem;
+    }
+
+    .board {
+        max-width: 100%; /* Ensure full width on mobile */
+        grid-gap: 3px; /* Decrease gap for mobile */
+    }
+
+    #welcomeMessage {
+        font-size: 1.2rem;
+    }
+}
